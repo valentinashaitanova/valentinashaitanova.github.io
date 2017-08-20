@@ -1,9 +1,25 @@
-<html><?php
+<!doctype HTML>
+<html lang="ua">
+<head>
+	<meta charset="UTF-8">
+	<title>MyFile.UA</title>
+</head>
+<style>
+   body {
+    background-image: url(/index/oboi1.jpg/); /* Путь к фоновому изображению */
+    background-color: #c7b39b; 
+    background-size: 100%;
+    font-size: 64px;
+    font-family: Arial;
+}
+</style>
+<body>
+<h1>y_o_u_m_a_n_a_g_e_r</h1>
+<?php
 function d_filelist_simple($dir)
 {
     $dh = opendir($dir);
     if (!$dh) return d_error("Cannot open $dir");
-    // use as little memory as possible using strings
     $files = '';
     for ($i = 0; $i < 2; $i++) {
         $f = readdir($dh);
@@ -17,3 +33,5 @@ function d_filelist_simple($dir)
 
    
 ?>
+</body>
+</html>
